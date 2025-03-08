@@ -5,7 +5,7 @@ export const metadata = {
   title: "Portfolio website",
   description: "This is a website of the legent Pratik Jha",
   icons: {
-    icon: '/icon.png',
+    icon: '/Icon.png',
   }
 };
 
@@ -13,7 +13,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <Head>
-        <link rel="shortcut icon" href="/icon.png" />
+        <link rel="shortcut icon" href="/Icon.png" />
       </Head>
       <body className="h-screen w-full">
         {children}
