@@ -4,7 +4,7 @@ import React, { useRef } from "react";
 import * as THREE from "three";
 
 function Popo() {
-  let tex = useTexture('./Texture.png');
+  let tex = useTexture('./Texture2.png');
   let popo = useRef(null);
   useFrame((state, delta) => {
     popo.current.rotation.y += delta;
