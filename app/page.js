@@ -20,7 +20,7 @@ const page = () => {
         <EffectComposer>
           <Bloom
             mipmapBlur
-            intensity={30}
+            intensity={50}
             luminanceThreshold={0}
             luminanceSmoothing={0}
           />
