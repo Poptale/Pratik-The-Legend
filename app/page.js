@@ -1,34 +1,56 @@
 "use client";
+import Nav from "./components/Nav";
+import Footer from "./components/Footer";
+import Cursor from "./components/Cursor";
 import React from "react";
-import { Canvas } from "@react-three/fiber";
-import Popo from "./components/Popo";
-import {
-  Bloom,
-  EffectComposer,
-  ToneMapping,
-} from "@react-three/postprocessing";
+import Cyl from "./components/Cyl";
+import Background from "./components/Background";
+import Arrow from "./components/Arrow";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Lenis from "lenis";
+import Connecting from "./components/Page2/Connecting";
+import Connecting2 from "./components/Page3/Connecting2";
+import Connect from "./components/Page4/Connect";
 
-const page = () => {
+gsap.registerPlugin(ScrollTrigger);
+
+const Page = () => {
+  const lenis = new Lenis({
+    autoRaf: true,
+    duration: 5,
+    lerp: 10,
+  });
+
+  lenis.on("scroll", (e) => {
+    console.log(e);
+  });
+
+
   return (
-    <div className="h-screen w-full">
-      <div>
-        <h1 className="text-[40vh] w-full leading-tight text-center font-semibold absolute text-zinc-900/50 -translate-1/2 top-[50%] left-[50%] ">Pratik Jha</h1>
+    <div>
+      <Cursor />
+      <div className="h-screen w-full sticky top-0">
+        <Nav />
+        <Background />
+        <Cyl />
+        <Footer />
+        <Arrow />
       </div>
-      <Canvas camera={{ fov: 70 }}>
-]        <ambientLight />
-        <Popo />
-        <EffectComposer>
-          <Bloom
-            mipmapBlur
-            intensity={250}
-            luminanceThreshold={0}
-            luminanceSmoothing={0}
-          />
-          <ToneMapping adaptive />
-        </EffectComposer>
-      </Canvas>
+
+      <div className="page2 overflow-hidden sticky -top-[100vh]">
+        <Connecting />
+      </div>
+
+      <div className="page3  sticky -top-[100vh]">
+        <Connecting2 />
+      </div>
+
+      {/* <div className="page4 h-screen w-full sticky top-[0vh]">
+        <Connect />
+      </div> */}
     </div>
   );
 };
 
-export default page;
+export default Page;

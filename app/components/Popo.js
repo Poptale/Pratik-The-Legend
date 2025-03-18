@@ -7,7 +7,7 @@ function Popo() {
   let tex = useTexture('./Texture2.png');
   let popo = useRef(null);
   useFrame((state, delta) => {
-    popo.current.rotation.y += delta;
+    (popo.current.rotation.y += (delta));
   });
   return (
     <mesh ref={popo} rotation={[0, 1.5, 0.5]}>
