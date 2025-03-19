@@ -16,7 +16,7 @@ const Cyl = () => {
         <EffectComposer>
           <Bloom
             mipmapBlur
-            intensity={100}
+            intensity={200}
             luminanceThreshold={0}
             luminanceSmoothing={0}
           />
