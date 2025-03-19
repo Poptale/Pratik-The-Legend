@@ -1,4 +1,9 @@
 import React from "react";
+import { FaInstagram } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+import { GiGluttonousSmile } from "react-icons/gi";
 
 const Works = () => {
   return (
@@ -122,34 +127,21 @@ const Works = () => {
             alt=""
           />
         </div>{" "}
-        <div className="card h-[80vh] w-[80vw] flex  bg-black">
-          <img
-            className="h-[100%] w-1/2 object-cover "
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlyA2_XYz5YaA67RHfA7u8RpvwmSH1ODhykw&s"
-            alt=""
-          />
-          <div className="flex flex-col items-center">
-            <div>
-              <div class="title flex justify-between gap-40 items-center w-full">
-                <h1 className="text-[10vw] font-semibold  ">05</h1>
-                <h2 className="text-3xl font-semibold pt-10 ">Pratik one</h2>
-              </div>
-              <p className="text-center pt-1 pr-5 ">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Officiis consequatur in reiciendis sit excepturi iste voluptatum
-                illo. Tempore, reprehenderit, explicabo praesentium esse sequi
-                rem illo eligendi odit nobis voluptas impedit, blanditiis
-                assumenda in voluptatum aliquam dolores culpa. Dolore, odio.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Deleniti nam suscipit dolorum veritatis at doloremque ducimus
-                voluptas. Perspiciatis, sed fugiat?
-              </p>
-            </div>
-            <div className="pt-20 text-2xl text-white/70 ">
-              <p>This work is under construction...</p>
+        <div className=" h-[80vh] relative w-full bg-black-900">
+          <div className=" w-full h-screen bg-zinc-900/40 rounded-full flex flex-col items-center  ">
+            <p className="text-5xl text-center pt-10">
+              Made with 🤍 by Pratik Jha
+            </p>
+            <GiGluttonousSmile size={300} className="my-15"/>
+
+            <div className="flex gap-10 ">
+              <FaInstagram className="cursor-pointer" color="white" size={35} />
+              <FaLinkedin className="cursor-pointer" color="white" size={35} />
+              <FaGithub className="cursor-pointer" color="white" size={35} />
+              <FaXTwitter className="cursor-pointer" color="white" size={35} />
             </div>
           </div>
-        </div>{" "}
+        </div>
       </div>
     </div>
   );

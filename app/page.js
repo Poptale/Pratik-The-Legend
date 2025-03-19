@@ -26,7 +26,6 @@ const Page = () => {
     console.log(e);
   });
 
-
   return (
     <div>
       <Cursor />
@@ -42,13 +41,9 @@ const Page = () => {
         <Connecting />
       </div>
 
-      <div className="page3  sticky -top-[100vh]">
+      <div className="page3 h-[400vh] sticky -top-[100vh]">
         <Connecting2 />
       </div>
-
-      {/* <div className="page4 h-screen w-full sticky top-[0vh]">
-        <Connect />
-      </div> */}
     </div>
   );
 };
